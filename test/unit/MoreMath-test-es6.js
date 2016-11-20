@@ -7,7 +7,8 @@ import {
 	getHighestPowerOfTwo,
 	isPowerOfTwo,
 	map,
-	rangeMod
+	rangeMod,
+	getUniqueNumber,
 } from "./../../dist/MoreMath";
 
 describe("MoreMath (ES6)", () => {
@@ -19,6 +20,7 @@ describe("MoreMath (ES6)", () => {
 		expect(MoreMath.clamp).to.equal(clamp);
 		expect(MoreMath.clampAuto).to.equal(clampAuto);
 		expect(MoreMath.getHighestPowerOfTwo).to.equal(getHighestPowerOfTwo);
+		expect(MoreMath.getUniqueNumber).to.equal(getUniqueNumber);
 		expect(MoreMath.isPowerOfTwo).to.equal(isPowerOfTwo);
 		expect(MoreMath.map).to.equal(map);
 		expect(MoreMath.rangeMod).to.equal(rangeMod);
@@ -89,5 +91,10 @@ describe("MoreMath (ES6)", () => {
 		expect(getHighestPowerOfTwo(524287)).to.equal(524288);
 		expect(getHighestPowerOfTwo(524288)).to.equal(524288);
 		expect(getHighestPowerOfTwo(524289)).to.equal(1048576);
+	});
+
+	it("should create unique numbers", function() {
+		expect(getUniqueNumber()).to.equal(1);
+		expect(getUniqueNumber()).to.equal(2);
 	});
 });

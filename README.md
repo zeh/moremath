@@ -116,6 +116,15 @@ Returns:
 * A power of two value that is equal to or higher than the input value.
 
 
+### `getUniqueNumber():number`
+
+Returns a unique number for this session. This is simply a global integer sequence, starting at 1.
+
+Returns:
+
+* A unique integer for the session.
+
+
 ### `isPowerOfTwo(value:number):Boolean`
 
 Returns whether a number is a power of two (2, 4, 8, 16, etc).

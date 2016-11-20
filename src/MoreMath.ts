@@ -2,6 +2,9 @@
  * @author Zeh Fernando
  */
 
+// Vars
+let _uniqueInt = 1;
+
 /**
  * Maps a value from a range, determined by old minimum and maximum values, to a new range,
  * determined by new minimum and maximum values. These minimum and maximum values are
@@ -70,6 +73,15 @@ function getHighestPowerOfTwo(value:number):number {
 }
 
 /**
+ * Returns a unique number for this session. This is simply a global integer sequence, starting at 1.
+ *
+ * @return		A unique integer for the session.
+ */
+function getUniqueNumber():number {
+	return _uniqueInt++;
+}
+
+/**
  * Returns whether a number is a power of two (2, 4, 8, 16, etc).
  *
  * @param value		A number to be tested.
@@ -117,6 +129,7 @@ const defs = {
 	clamp,
 	clampAuto,
 	getHighestPowerOfTwo,
+	getUniqueNumber,
 	isPowerOfTwo,
 	map,
 	rangeMod,
@@ -127,11 +140,11 @@ export {
 	clamp,
 	clampAuto,
 	getHighestPowerOfTwo,
+	getUniqueNumber,
 	isPowerOfTwo,
 	map,
 	rangeMod,
 };
-
 
 // export default class MathUtils {
 //     static DEG2RAD: number;

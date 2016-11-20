@@ -1,7 +1,4 @@
 /**
- * @author Zeh Fernando
- */
-/**
  * Maps a value from a range, determined by old minimum and maximum values, to a new range,
  * determined by new minimum and maximum values. These minimum and maximum values are
  * referential; the new value is not clamped by them.
@@ -47,6 +44,12 @@ declare function clampAuto(value: number, clamp1?: number, clamp2?: number): num
  */
 declare function getHighestPowerOfTwo(value: number): number;
 /**
+ * Returns a unique number for this session. This is simply a global integer sequence, starting at 1.
+ *
+ * @return		A unique integer for the session.
+ */
+declare function getUniqueNumber(): number;
+/**
  * Returns whether a number is a power of two (2, 4, 8, 16, etc).
  *
  * @param value		A number to be tested.
@@ -84,8 +87,9 @@ declare const defs: {
     clamp: (value: number, min?: number, max?: number) => number;
     clampAuto: (value: number, clamp1?: number, clamp2?: number) => number;
     getHighestPowerOfTwo: (value: number) => number;
+    getUniqueNumber: () => number;
     isPowerOfTwo: (value: number) => Boolean;
     map: (value: number, oldMin: number, oldMax: number, newMin?: number, newMax?: number, shouldClamp?: Boolean) => number;
     rangeMod: (value: number, min: number, pseudoMax: number) => number;
 };
-export { defs as default, clamp, clampAuto, getHighestPowerOfTwo, isPowerOfTwo, map, rangeMod };
+export { defs as default, clamp, clampAuto, getHighestPowerOfTwo, getUniqueNumber, isPowerOfTwo, map, rangeMod };
