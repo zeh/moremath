@@ -8,7 +8,7 @@
 npm install moremath
 ```
 
-MoreMath is written in TypeScript. I can be used both in JavaScript and TypeScript, but in TypeScript projects you get the benefit of code completion by default.
+MoreMath is written in TypeScript. It can be used both in JavaScript and TypeScript, but in TypeScript projects you get the benefit of code completion by default.
 
 ## Usage
 
