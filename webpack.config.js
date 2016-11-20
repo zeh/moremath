@@ -32,10 +32,6 @@ const prodPlugins = [
 	}),
 ];
 
-const plugins = basePlugins
-	.concat(PRODUCTION ? prodPlugins : [])
-	.concat(!PRODUCTION ? devPlugins : []);
-
 module.exports = {
 	entry: APP_PATH,
 	output: {
