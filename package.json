@@ -1,6 +1,6 @@
 {
   "name": "moremath",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The missing JavaScript Math functions",
   "main": "./dist/MoreMath.js",
   "types": "./dist/src/MoreMath.d.ts",
