@@ -23,7 +23,7 @@ Import the whole package:
 
 ```javascript
 // Import everything (JavaScript ES5)
-var MoreMath = require('moremath').default
+var MoreMath = require('moremath').default;
 
 // Import everything (JavaScript ES6 and TypeScript)
 import MoreMath from 'moremath';
