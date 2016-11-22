@@ -23,10 +23,10 @@ Import the whole package:
 
 ```javascript
 // Import everything (JavaScript ES5)
-var MoreMath = require("./../../dist/MoreMath").default
+var MoreMath = require('moremath').default
 
 // Import everything (JavaScript ES6 and TypeScript)
-import MoreMath from "./../../dist/MoreMath";
+import MoreMath from 'moremath';
 ```
 
 Then use any of its functions:
@@ -41,10 +41,10 @@ Import a function:
 
 ```javascript
 // Import clamp() (JavaScript ES5)
-var clamp = require("./../../dist/MoreMath").default.clamp;
+var clamp = require('moremath').default.clamp;
 
 // Import clamp() (JavaScript ES6 and TypeScript)
-import { clamp } from "./../../dist/MoreMath";
+import { clamp } from 'moremath';
 ```
 
 Then use it:
