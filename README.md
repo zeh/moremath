@@ -1,5 +1,10 @@
 # MoreMath
 
+[![npm](https://img.shields.io/npm/v/moremath.svg)](https://www.npmjs.com/package/moremath)
+[![Build Status](https://travis-ci.org/zeh/moremath.svg?branch=master)](https://travis-ci.org/zeh/moremath)
+[![Coverage Status](https://coveralls.io/repos/github/zeh/moremath/badge.svg?branch=master)](https://coveralls.io/github/zeh/moremath?branch=master)
+[![Dependency Status](https://david-dm.org/zeh/moremath.svg)](https://david-dm.org/zeh/moremath)
+
 *MoreMath* is a library that provides useful Math functions -- functions that either should have been part of the core `Math` package from the start, or that are otherwise commonly needed.
 
 ## Install
