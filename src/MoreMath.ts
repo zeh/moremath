@@ -149,6 +149,3 @@ export {
 // export default class MathUtils {
 //     static DEG2RAD: number;
 //     static RAD2DEG: number;
-
-
-
