@@ -18,15 +18,17 @@ const prodPlugins = [
 	new webpack.optimize.UglifyJsPlugin({
 		compress: {
 			warnings: false,
-			sequences: true,
+			sequences: false,
 			dead_code: true,
 			conditionals: true,
 			booleans: true,
 			unused: true,
-			if_return: true,
-			join_vars: true,
-			drop_console: true
+			if_return: false,
+			join_vars: false,
+			evaluate: true,
+			properties: true,
 		},
+		beautify: true,
 		comments: false,
 		sourceMap: false,
 	}),
