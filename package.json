@@ -4,7 +4,7 @@
   "description": "The missing JavaScript Math functions",
   "main": "./dist/MoreMath.umd.js",
   "module": "./dist/MoreMath.es.js",
-  "types": "./dist/src/MoreMath.d.ts",
+  "types": "./dist/MoreMath.d.ts",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "build:declarations": "tsc -d",
