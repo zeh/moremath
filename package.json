@@ -1,6 +1,6 @@
 {
   "name": "moremath",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "The missing JavaScript Math functions",
   "main": "./dist/MoreMath.umd.js",
   "module": "./dist/MoreMath.es.js",
