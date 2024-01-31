@@ -17,9 +17,16 @@ let _uniqueInt = 1;
  * @param newMax	The new maximum value.
  * @return			The new value, mapped to the new range.
  */
-function map(value:number, oldMin:number, oldMax:number, newMin:number = 0, newMax:number = 1, shouldClamp:Boolean = false):number {
+function map(
+	value: number,
+	oldMin: number,
+	oldMax: number,
+	newMin: number = 0,
+	newMax: number = 1,
+	shouldClamp: boolean = false,
+): number {
 	if (oldMin === oldMax) return newMin;
-	let p = ((value - oldMin) / (oldMax - oldMin) * (newMax - newMin)) + newMin;
+	let p = ((value - oldMin) / (oldMax - oldMin)) * (newMax - newMin) + newMin;
 	if (shouldClamp) p = newMin < newMax ? clamp(p, newMin, newMax) : clamp(p, newMax, newMin);
 	return p;
 }
@@ -34,7 +41,7 @@ function map(value:number, oldMin:number, oldMax:number, newMin:number = 0, newM
  * @param max		Maximum value allowed.
  * @return			The newly clamped value.
  */
-function clamp(value:number, min:number = 0, max:number = 1):number {
+function clamp(value: number, min: number = 0, max: number = 1): number {
 	return value < min ? min : value > max ? max : value;
 }
 
@@ -51,9 +58,9 @@ function clamp(value:number, min:number = 0, max:number = 1):number {
  * @param clamp2	Other end of the allowed range.
  * @return			The newly clamped value.
  */
-function clampAuto(value:number, clamp1:number = 0, clamp2:number = 1):number {
+function clampAuto(value: number, clamp1: number = 0, clamp2: number = 1): number {
 	if (clamp2 < clamp1) {
-		const v:number = clamp2;
+		const v: number = clamp2;
 		clamp2 = clamp1;
 		clamp1 = v;
 	}
@@ -66,8 +73,8 @@ function clampAuto(value:number, clamp1:number = 0, clamp2:number = 1):number {
  * @param value		The minimum value desired.
  * @return			A power of two value that is equal to or higher than the input value.
  */
-function getHighestPowerOfTwo(value:number):number {
-	let c:number = 1;
+function getHighestPowerOfTwo(value: number): number {
+	let c: number = 1;
 	while (c < value) c <<= 1;
 	return c;
 }
@@ -77,7 +84,7 @@ function getHighestPowerOfTwo(value:number):number {
  *
  * @return		A unique integer for the session.
  */
-function getUniqueNumber():number {
+function getUniqueNumber(): number {
 	return _uniqueInt++;
 }
 
@@ -87,7 +94,7 @@ function getUniqueNumber():number {
  * @param value		A number to be tested.
  * @return			Whether the input number is a power of two.
  */
-function isPowerOfTwo(value:number):Boolean {
+function isPowerOfTwo(value: number): boolean {
 	return value > 0 && (value & (value - 1)) === 0;
 }
 
@@ -117,8 +124,8 @@ function isPowerOfTwo(value:number):Boolean {
  * 	console.log(rangeMod(-98, 0, 100));
  * 	// Result: 2
  */
-function rangeMod(value:number, min:number, pseudoMax:number):number {
-	let range:number = pseudoMax - min;
+function rangeMod(value: number, min: number, pseudoMax: number): number {
+	const range: number = pseudoMax - min;
 	value = (value - min) % range;
 	if (value < 0) value = range - (-value % range);
 	value += min;
@@ -135,16 +142,7 @@ const defs = {
 	rangeMod,
 };
 
-export {
-	defs as default,
-	clamp,
-	clampAuto,
-	getHighestPowerOfTwo,
-	getUniqueNumber,
-	isPowerOfTwo,
-	map,
-	rangeMod,
-};
+export { defs as default, clamp, clampAuto, getHighestPowerOfTwo, getUniqueNumber, isPowerOfTwo, map, rangeMod };
 
 // export default class MathUtils {
 //     static DEG2RAD: number;
